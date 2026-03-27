@@ -1,0 +1,165 @@
+.chm-marker {
+    background-color: #0F0F0F;
+    color: var(--wp--preset--color--white);
+    padding: 160px var(--wp--style--root--padding-right, 60px);
+    position: relative;
+    overflow: hidden;
+}
+
+.chm-marker__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Background Image Decoration */
+.chm-marker__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    object-fit: contain;
+    object-position: right center;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.chm-marker__content-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    gap: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Left Visual Side */
+.chm-marker__visual {
+    grid-column: 1 / 7;
+    position: relative;
+    padding-bottom: 60px; /* Space for the quote box */
+}
+
+.chm-marker__image-wrap {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #1A1A1A;
+    padding: 1px; /* Subtle frame effect */
+}
+
+.chm-marker__image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%) brightness(0.9) contrast(1.1);
+}
+
+.chm-marker__placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+}
+
+/* Overlapping Quote Box */
+.chm-marker__quote-box {
+    position: absolute;
+    bottom: 0;
+    right: -40px;
+    width: 280px;
+    background-color: var(--wp--preset--color--gold);
+    color: var(--wp--preset--color--black);
+    padding: 40px;
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.4);
+    z-index: 3;
+}
+
+.chm-marker__quote-text {
+    margin: 0;
+    font-family: var(--wp--preset--font-family--body);
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Right Content Side */
+.chm-marker__text {
+    grid-column: 8 / 13;
+}
+
+.chm-marker__est {
+    display: block;
+    font-family: var(--wp--preset--font-family--body);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.chm-marker__title {
+    font-size: 64px;
+    line-height: 1.05;
+    margin: 0 0 40px 0;
+    letter-spacing: -0.01em;
+    color: var(--wp--preset--color--white);
+    font-weight: 400;
+}
+
+.chm-marker__description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 60px;
+    max-width: 480px;
+}
+
+/* The Monograph Link */
+.chm-marker__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    font-family: var(--wp--preset--font-family--body);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--wp--preset--color--gold);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.chm-marker__link:hover {
+    color: var(--wp--preset--color--white);
+    letter-spacing: 0.25em;
+}
+
+.chm-marker__arrow {
+    transition: transform 0.3s ease;
+}
+
+.chm-marker__link:hover .chm-marker__arrow {
+    transform: translateX(10px);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 1100px) {
+    .chm-marker__title { font-size: 48px; }
+    .chm-marker__quote-box { right: 0; width: 240px; padding: 30px; }
+    .chm-marker__ghost { font-size: 400px; top: -60px; }
+}
+
+@media screen and (max-width: 900px) {
+    .chm-marker { padding: 80px 40px; }
+    .chm-marker__content-grid { display: flex; flex-direction: column; gap: 60px; }
+    .chm-marker__visual { width: 100%; }
+    .chm-marker__text { width: 100%; }
+    .chm-marker__quote-box { transform: translateY(20px); }
+    .chm-marker__ghost { display: none; }
+}

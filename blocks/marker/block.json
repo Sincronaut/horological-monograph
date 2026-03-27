@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.9/block.json",
+	"name": "child/marker",
+	"title": "Marker Section",
+	"category": "design",
+	"attributes": {
+		"estText": {
+			"type": "string",
+			"default": "EST. 1884"
+		},
+		"title": {
+			"type": "string",
+			"default": "Heritage\nReimagined\nfor the Infinite."
+		},
+		"description": {
+			"type": "string",
+			"default": "Founded in the Jura Mountains, our atelier has remained family-owned for four generations. Every component—from the hairspring to the hand-polished bridge—is crafted in-house with a tolerance measured in microns."
+		},
+		"quote": {
+			"type": "string",
+			"default": "\"Precision is the only language we speak.\""
+		},
+		"linkText": {
+			"type": "string",
+			"default": "THE MONOGRAPH STORY"
+		},
+		"linkUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"mainImage": {
+			"type": "string"
+		},
+		"backgroundImage": {
+			"type": "string"
+		}
+	},
+	"render": "file:./render.php",
+	"style": "file:./style.css"
+}
