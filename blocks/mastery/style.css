@@ -1,0 +1,118 @@
+.chm-mastery {
+    background-color: #0F0F0F;
+    color: var(--wp--preset--color--white);
+    padding: 120px var(--wp--style--root--padding-right, 60px);
+    overflow: hidden;
+}
+
+.chm-mastery__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.chm-mastery__title {
+    margin-bottom: 60px;
+}
+
+.chm-mastery__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Labels Row */
+.chm-mastery__labels {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.chm-mastery__label {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/* Ruler Element */
+.chm-mastery__ruler-container {
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+    margin-bottom: 60px;
+}
+
+.chm-mastery__ruler {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.chm-mastery__tick {
+    width: 1px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease;
+}
+
+.chm-mastery__tick.is-active {
+    height: 32px;
+    background-color: var(--wp--preset--color--gold);
+    box-shadow: 0 0 15px var(--wp--preset--color--gold);
+}
+
+.chm-mastery__glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0) 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Values Row */
+.chm-mastery__values {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+}
+
+.chm-mastery__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chm-mastery__val {
+    font-family: var(--wp--preset--font-family--headings);
+    font-size: 42px;
+    color: var(--wp--preset--color--white);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.chm-mastery__sub {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 900px) {
+    .chm-mastery__labels, .chm-mastery__values {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 0;
+    }
+    .chm-mastery__ruler-container { display: none; }
+}

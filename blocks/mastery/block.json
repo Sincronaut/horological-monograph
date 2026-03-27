@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.9/block.json",
+	"name": "child/mastery",
+	"title": "Technical Mastery",
+	"category": "design",
+	"attributes": {
+		"sectionTitle": {
+			"type": "string",
+			"default": "TECHNICAL MASTERY"
+		},
+		"it1_label": { "type": "string", "default": "POWER RESERVE" },
+		"it1_value": { "type": "string", "default": "72H" },
+		"it1_sub": { "type": "string", "default": "VERIFIED" },
+		"it2_label": { "type": "string", "default": "WATER RESISTANCE" },
+		"it2_value": { "type": "string", "default": "100M" },
+		"it2_sub": { "type": "string", "default": "TESTED" },
+		"it3_label": { "type": "string", "default": "FREQUENCY" },
+		"it3_value": { "type": "string", "default": "4HZ" },
+		"it3_sub": { "type": "string", "default": "STABILITY" },
+		"it4_label": { "type": "string", "default": "JEWELS" },
+		"it4_value": { "type": "string", "default": "42" },
+		"it4_sub": { "type": "string", "default": "SYNTHETIC" }
+	},
+	"render": "file:./render.php",
+	"style": "file:./style.css"
+}

@@ -43,6 +43,9 @@ function chm_enqueue_styles() {
 
     // Header styles.
     wp_enqueue_style( 'chm-header-style', get_stylesheet_directory_uri() . '/assets/css/header.css', array( 'child-style' ), wp_get_theme()->get( 'Version' ) );
+
+    // Footer styles.
+    wp_enqueue_style( 'chm-footer-style', get_stylesheet_directory_uri() . '/assets/css/footer.css', array( 'child-style' ), wp_get_theme()->get( 'Version' ) );
 }
 add_action( 'wp_enqueue_scripts', 'chm_enqueue_styles', 20 );
 
