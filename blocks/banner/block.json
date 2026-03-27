@@ -1,0 +1,29 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.9/block.json",
+	"name": "child-hm/banner",
+	"title": "Banner",
+	"category": "design",
+	"attributes": {
+		"subtitle": {
+			"type": "string",
+			"default": "THE INAUGURAL EDITION"
+		},
+		"title": {
+			"type": "string",
+			"default": "The Art of\nTime"
+		},
+		"buttonText": {
+			"type": "string",
+			"default": "EXPLORE COLLECTION"
+		},
+		"buttonUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"backgroundImage": {
+			"type": "string"
+		}
+	},
+	"render": "file:./render.php",
+	"style": "file:./style.css"
+}

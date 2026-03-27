@@ -1,0 +1,74 @@
+.hm-banner {
+    position: relative;
+    min-height: 600px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    background-color: var(--wp--preset--color--black);
+}
+
+.hm-banner__background {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.hm-banner__overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
+    z-index: 1;
+}
+
+.hm-banner__content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    padding: var(--wp--style--root--padding-left, 40px);
+}
+
+.hm-banner__subtitle {
+    font-family: var(--wp--preset--font-family--body);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    color: var(--wp--preset--color--gold);
+    margin-bottom: 32px;
+    text-transform: uppercase;
+}
+
+.hm-banner__title {
+    color: var(--wp--preset--color--white) !important; /* Force priority over global if needed, although global is already set */
+    margin: 0 0 60px;
+    line-height: 1;
+    font-style: italic; /* Matches the 'Time' aesthetic in some horology brands, but applying to full title */
+}
+
+
+.hm-banner__button {
+    display: inline-block;
+    background-color: var(--wp--preset--color--gold);
+    color: var(--wp--preset--color--black) !important;
+    padding: 20px 48px;
+    text-decoration: none;
+    font-family: var(--wp--preset--font-family--body);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hm-banner__button:hover {
+    background-color: #f7d66a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
