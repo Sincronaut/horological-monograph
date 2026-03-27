@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.9/block.json",
+	"name": "child/collection",
+	"title": "Collection Grid",
+	"category": "design",
+	"attributes": {
+		"sectionTitle": {
+			"type": "string",
+			"default": "Curated Collections"
+		},
+		"sectionDesc": {
+			"type": "string",
+			"default": "Each piece is a testament to the pursuit of perfection, merging centuries of Swiss tradition with avant-garde material science."
+		},
+		"viewAllText": {
+			"type": "string",
+			"default": "VIEW ALL PIECES"
+		},
+		"viewAllUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"it1_img": { "type": "string" },
+		"it1_title": { "type": "string", "default": "The Obsidian Chronograph" },
+		"it1_sub": { "type": "string", "default": "BESPOKE SERIES - 2024" },
+		"it1_badge": { "type": "string", "default": "CALIBRE 9012" },
+		
+		"it2_img": { "type": "string" },
+		"it2_title": { "type": "string", "default": "The Aurelian Skeleton" },
+		"it2_sub": { "type": "string", "default": "LIMITED EDITION - 1/50" },
+		
+		"it3_img": { "type": "string" },
+		"it3_title": { "type": "string", "default": "Vanguard GMT" },
+		"it3_sub": { "type": "string", "default": "HERITAGE SERIES" },
+		
+		"it4_img": { "type": "string" },
+		"it4_title": { "type": "string", "default": "Lunar Phase Monograph" },
+		"it4_sub": { "type": "string", "default": "GRAND COMPLICATION" }
+	},
+	"render": "file:./render.php",
+	"style": "file:./style.css"
+}

@@ -45,7 +45,7 @@ if ($background_image) {
 
         <?php if ($buttonText) : ?>
             <div class="hm-banner__actions">
-                <a href="<?php echo esc_url($buttonUrl); ?>" class="hm-banner__button">
+                <a href="<?php echo esc_url($buttonUrl); ?>" class="hm-banner__button wp-element-button">
                     <?php echo esc_html($buttonText); ?>
                 </a>
             </div>

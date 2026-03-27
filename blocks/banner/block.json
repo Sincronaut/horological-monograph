@@ -1,6 +1,6 @@
 {
 	"$schema": "https://schemas.wp.org/wp/6.9/block.json",
-	"name": "child-hm/banner",
+	"name": "child/banner",
 	"title": "Banner",
 	"category": "design",
 	"attributes": {
