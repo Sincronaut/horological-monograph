@@ -22,6 +22,13 @@ body {
     font-family: 'Manrope', sans-serif;
     font-size: 18px;
     font-weight: 400;
+    margin: 0;
+}
+
+main {
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,4 +46,56 @@ h2 {
 
 h3 {
     font-size: 30px;
+}
+
+/* Global Button Styling (Exquisite Luxury Theme) */
+.wp-element-button, 
+.wp-block-button__link,
+.hm-banner__button {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding: 20px 48px;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid transparent;
+}
+
+body .wp-element-button:hover,
+body .wp-block-button__link:hover,
+body .hm-banner__button:hover {
+    background-color: #E5C35D !important; /* Deeper, richer gold */
+    color: var(--wp--preset--color--black) !important;
+    transform: translateY(-2px) !important;
+    letter-spacing: 0.25em !important; /* Breathing room for luxury */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Secondary border reveal effect */
+body .wp-element-button::after,
+body .wp-block-button__link::after,
+body .hm-banner__button::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    pointer-events: none;
+    z-index: -1;
+}
+
+body .wp-element-button:hover::after,
+body .wp-block-button__link:hover::after,
+body .hm-banner__button:hover::after {
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
 }
