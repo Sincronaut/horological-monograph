@@ -31,6 +31,21 @@ main {
     padding: 0;
 }
 
+/* Remove WordPress default spacing between blocks and footer */
+.wp-site-blocks {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.wp-site-blocks > * + * {
+    margin-top: 0 !important;
+}
+
+.entry-content {
+    margin: 0;
+    padding: 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Noto Serif', serif;
     font-weight: 400;
