@@ -34,7 +34,7 @@ $items = [
 ?>
 <section class="chm-collection">
     <div class="chm-collection__header">
-        <div class="chm-collection__title-group">
+        <div class="chm-collection__title-group" data-chm-animate="slide-up">
             <h2 class="chm-collection__title"><?php echo esc_html($title); ?></h2>
             <p class="chm-collection__description"><?php echo nl2br(esc_html($desc)); ?></p>
         </div>
@@ -42,8 +42,13 @@ $items = [
     </div>
 
     <div class="chm-collection__grid">
-        <?php foreach ($items as $item): ?>
-            <article class="chm-collection-item <?php echo esc_attr($item['class']); ?>">
+        <?php 
+        $i = 0;
+        foreach ($items as $item): 
+            $delay_class = "anim-delay-" . (($i + 1) * 100);
+            $i++;
+        ?>
+            <article class="chm-collection-item <?php echo esc_attr($item['class'] . ' ' . $delay_class); ?>" data-chm-animate="slide-up">
                 <div class="chm-collection-item__image-wrap">
                     <?php if ($item['img']): ?>
                         <img src="<?php echo esc_url($item['img']); ?>" alt="<?php echo esc_attr($item['title']); ?>">

@@ -36,15 +36,15 @@ if ($background_image) {
     <div class="hm-banner__overlay"></div>
     <div class="hm-banner__content">
         <?php if ($subtitle) : ?>
-            <p class="hm-banner__subtitle"><?php echo esc_html($subtitle); ?></p>
+            <p class="hm-banner__subtitle" data-chm-animate="slide-down"><?php echo esc_html($subtitle); ?></p>
         <?php endif; ?>
 
         <?php if ($title) : ?>
-            <h1 class="hm-banner__title"><?php echo wp_kses_post(nl2br($title)); ?></h1>
+            <h1 class="hm-banner__title anim-delay-200" data-chm-animate="slide-up"><?php echo wp_kses_post(nl2br($title)); ?></h1>
         <?php endif; ?>
 
         <?php if ($buttonText) : ?>
-            <div class="hm-banner__actions">
+            <div class="hm-banner__actions anim-delay-400" data-chm-animate="fade-in">
                 <a href="<?php echo esc_url($buttonUrl); ?>" class="hm-banner__button wp-element-button">
                     <?php echo esc_html($buttonText); ?>
                 </a>
