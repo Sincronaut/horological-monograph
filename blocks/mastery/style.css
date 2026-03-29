@@ -1,7 +1,7 @@
 .chm-mastery {
     background-color: #0F0F0F;
     color: var(--wp--preset--color--white);
-    padding: 120px var(--wp--style--root--padding-right, 60px);
+    padding: clamp(80px, 10vw, 160px) var(--chm-fluid-padding);
     overflow: hidden;
 }
 
@@ -95,7 +95,7 @@
 
 .chm-mastery__val {
     font-family: var(--wp--preset--font-family--headings);
-    font-size: 42px;
+    font-size: clamp(32px, 4vw, 42px);
     color: var(--wp--preset--color--white);
     line-height: 1;
     margin-bottom: 10px;

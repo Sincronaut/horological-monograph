@@ -1,26 +1,27 @@
 /*
 Theme Name: child-horological-monograph
-Theme URI: 
-Author: 
-Author URI: 
-Description: 
-Requires at least: 6.9
-Tested up to: 6.9
-Requires PHP: 5.7
-Version: 
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentytwentyfive
 Text Domain: child-horological-monograph
-Tags: 
+Version: 1.0.0
 */
+
+:root {
+    /* Fluid Spacing & Typography Tokens */
+    --chm-fluid-padding: clamp(24px, 6vw, 80px);
+    --chm-fluid-h1: clamp(48px, 10vw, 128px);
+    --chm-fluid-h2: clamp(32px, 5vw, 48px);
+    --chm-fluid-h3: clamp(24px, 3vw, 32px);
+    --chm-fluid-p: clamp(16px, 1.25vw, 18px);
+    --chm-fluid-button-px: clamp(32px, 4vw, 56px);
+    --chm-fluid-button-py: clamp(16px, 2vw, 24px);
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Basic Typography Fallback */
 body {
     font-family: 'Manrope', sans-serif;
-    font-size: 18px;
+    font-size: var(--chm-fluid-p);
     font-weight: 400;
     margin: 0;
 }
@@ -52,15 +53,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 128px;
+    font-size: var(--chm-fluid-h1);
+    line-height: 1.1;
 }
 
 h2 {
-    font-size: 48px;
+    font-size: var(--chm-fluid-h2);
+    line-height: 1.2;
 }
 
 h3 {
-    font-size: 30px;
+    font-size: var(--chm-fluid-h3);
+    line-height: 1.3;
+}
+
+p {
+    font-size: var(--chm-fluid-p);
+    line-height: 1.6;
 }
 
 /* Global Button Styling (Exquisite Luxury Theme) */
@@ -70,12 +79,14 @@ h3 {
     display: inline-block;
     cursor: pointer;
     position: relative;
-    padding: 20px 48px;
+    padding: var(--chm-fluid-button-py) var(--chm-fluid-button-px);
     z-index: 1;
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1) !important;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border: 1px solid transparent;
+    font-size: clamp(12px, 1vw, 14px) !important;
+    letter-spacing: 0.15em !important;
 }
 
 body .wp-element-button:hover,

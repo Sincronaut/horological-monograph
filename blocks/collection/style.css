@@ -1,7 +1,7 @@
 .chm-collection {
-    background-color: #0F0F0F; /* Slightly darker or matching your theme's dark */
+    background-color: #0F0F0F;
     color: var(--wp--preset--color--white);
-    padding: 120px var(--wp--style--root--padding-right, 60px);
+    padding: clamp(80px, 10vw, 160px) var(--chm-fluid-padding);
     overflow: hidden;
 }
 
@@ -17,7 +17,7 @@
 
 .chm-collection__title {
     margin: 0 0 20px 0;
-    font-size: 48px;
+    font-size: var(--chm-fluid-h2);
     line-height: 1.1;
     color: var(--wp--preset--color--white);
     text-transform: capitalize;

@@ -1,7 +1,7 @@
 .chm-marker {
     background-color: #0F0F0F;
     color: var(--wp--preset--color--white);
-    padding: 160px var(--wp--style--root--padding-right, 60px);
+    padding: clamp(100px, 12vw, 200px) var(--chm-fluid-padding);
     position: relative;
     overflow: hidden;
 }
@@ -104,9 +104,9 @@
 }
 
 .chm-marker__title {
-    font-size: 64px;
+    font-size: clamp(40px, 6vw, 64px);
     line-height: 1.05;
-    margin: 0 0 40px 0;
+    margin: 0 0 clamp(24px, 4vw, 40px) 0;
     letter-spacing: -0.01em;
     color: var(--wp--preset--color--white);
     font-weight: 400;
