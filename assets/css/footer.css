@@ -161,19 +161,40 @@
 /* Mobile Responsive */
 @media screen and (max-width: 1000px) {
     .site-footer__main {
-        grid-template-columns: 1fr 1fr;
-        gap: 60px 40px;
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+    }
+
+    .site-footer__logo-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .site-footer__tagline {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .site-footer__form {
+        justify-content: center;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 @media screen and (max-width: 600px) {
     .site-footer__main {
-        grid-template-columns: 1fr;
         gap: 50px;
     }
     .site-footer__bottom {
         flex-direction: column;
         gap: 30px;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+    .site-footer__socials {
+        justify-content: center;
     }
 }
