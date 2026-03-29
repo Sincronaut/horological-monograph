@@ -24,20 +24,22 @@ $bgImage = $attributes['backgroundImage'] ?? '';
                         <div class="chm-marker__placeholder"></div>
                     <?php endif; ?>
                 </div>
-                <div class="chm-marker__quote-box">
+                <div class="chm-marker__quote-box anim-delay-500" data-chm-animate="slide-left">
                     <p class="chm-marker__quote-text"><?php echo esc_html($quote); ?></p>
                 </div>
             </div>
 
             <!-- Right Side: Textual Content -->
             <div class="chm-marker__text">
-                <span class="chm-marker__est"><?php echo esc_html($est); ?></span>
-                <h2 class="chm-marker__title"><?php echo nl2br(esc_html($title)); ?></h2>
-                <p class="chm-marker__description"><?php echo esc_html($desc); ?></p>
-                <a href="<?php echo esc_url($linkUrl); ?>" class="chm-marker__link">
-                    <?php echo esc_html($linkText); ?>
-                    <span class="chm-marker__arrow">→</span>
-                </a>
+                <span class="chm-marker__est" data-chm-animate="fade-in"><?php echo esc_html($est); ?></span>
+                <h2 class="chm-marker__title anim-delay-200" data-chm-animate="slide-up"><?php echo nl2br(esc_html($title)); ?></h2>
+                <p class="chm-marker__description anim-delay-400" data-chm-animate="slide-up"><?php echo esc_html($desc); ?></p>
+                <div class="chm-marker__link-wrap anim-delay-500" data-chm-animate="fade-in">
+                    <a href="<?php echo esc_url($linkUrl); ?>" class="chm-marker__link">
+                        <?php echo esc_html($linkText); ?>
+                        <span class="chm-marker__arrow">→</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

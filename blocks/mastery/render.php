@@ -7,13 +7,13 @@ $it4 = [ 'label' => $attributes['it4_label'], 'val' => $attributes['it4_value'],
 ?>
 <section class="chm-mastery">
     <div class="chm-mastery__container">
-        <h2 class="chm-mastery__title"><?php echo esc_html($title); ?></h2>
+        <h2 class="chm-mastery__title" data-chm-animate="fade-in"><?php echo esc_html($title); ?></h2>
 
         <!-- The Stats Grid -->
         <div class="chm-mastery__grid">
             
             <!-- Labels Row -->
-            <div class="chm-mastery__labels">
+            <div class="chm-mastery__labels" data-chm-animate="slide-up">
                 <span class="chm-mastery__label"><?php echo esc_html($it1['label']); ?></span>
                 <span class="chm-mastery__label"><?php echo esc_html($it2['label']); ?></span>
                 <span class="chm-mastery__label"><?php echo esc_html($it3['label']); ?></span>
@@ -21,7 +21,7 @@ $it4 = [ 'label' => $attributes['it4_label'], 'val' => $attributes['it4_value'],
             </div>
 
             <!-- Visual Ruler with Ticks and Glow -->
-            <div class="chm-mastery__ruler-container" aria-hidden="true">
+            <div class="chm-mastery__ruler-container anim-delay-200" aria-hidden="true" data-chm-animate="fade-in">
                 <div class="chm-mastery__ruler">
                     <?php for($i=0; $i<15; $i++): ?>
                         <div class="chm-mastery__tick <?php echo ($i === 7) ? 'is-active' : ''; ?>"></div>
@@ -33,19 +33,19 @@ $it4 = [ 'label' => $attributes['it4_label'], 'val' => $attributes['it4_value'],
 
             <!-- Values Row -->
             <div class="chm-mastery__values">
-                <div class="chm-mastery__stat">
+                <div class="chm-mastery__stat anim-delay-300" data-chm-animate="slide-up">
                     <span class="chm-mastery__val"><?php echo esc_html($it1['val']); ?></span>
                     <span class="chm-mastery__sub"><?php echo esc_html($it1['sub']); ?></span>
                 </div>
-                <div class="chm-mastery__stat">
+                <div class="chm-mastery__stat anim-delay-400" data-chm-animate="slide-up">
                     <span class="chm-mastery__val"><?php echo esc_html($it2['val']); ?></span>
                     <span class="chm-mastery__sub"><?php echo esc_html($it2['sub']); ?></span>
                 </div>
-                <div class="chm-mastery__stat">
+                <div class="chm-mastery__stat anim-delay-500" data-chm-animate="slide-up">
                     <span class="chm-mastery__val"><?php echo esc_html($it3['val']); ?></span>
                     <span class="chm-mastery__sub"><?php echo esc_html($it3['sub']); ?></span>
                 </div>
-                <div class="chm-mastery__stat">
+                <div class="chm-mastery__stat anim-delay-600" data-chm-animate="slide-up">
                     <span class="chm-mastery__val"><?php echo esc_html($it4['val']); ?></span>
                     <span class="chm-mastery__sub"><?php echo esc_html($it4['sub']); ?></span>
                 </div>

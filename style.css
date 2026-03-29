@@ -100,6 +100,71 @@ body .hm-banner__button:hover {
     border: 1px solid rgba(255, 255, 255, 0.3) !important;
 }
 
+/* Global Animation Utility System */
+[data-chm-animate] {
+    opacity: 0;
+    transition-property: opacity, transform, filter, clip-path;
+    transition-duration: 1.2s;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    transition-delay: var(--chm-anim-delay, 0ms);
+}
+
+[data-chm-animate].is-visible {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+/* Animation Types */
+[data-chm-animate="fade-in"] {
+    transform: none;
+}
+
+[data-chm-animate="slide-up"] {
+    transform: translateY(40px);
+}
+
+[data-chm-animate="slide-down"] {
+    transform: translateY(-40px);
+}
+
+[data-chm-animate="slide-left"] {
+    transform: translateX(40px);
+}
+
+[data-chm-animate="slide-right"] {
+    transform: translateX(-40px);
+}
+
+[data-chm-animate="scale-up"] {
+    transform: scale(0.95);
+}
+
+/* Stagger & Delay Utilities */
+.anim-delay-100 { --chm-anim-delay: 100ms; }
+.anim-delay-200 { --chm-anim-delay: 200ms; }
+.anim-delay-300 { --chm-anim-delay: 300ms; }
+.anim-delay-400 { --chm-anim-delay: 400ms; }
+.anim-delay-500 { --chm-anim-delay: 500ms; }
+
+/* Special High-End Keyframes */
+@keyframes reveal-mask {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.reveal-mask {
+    animation: reveal-mask 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    animation-play-state: paused;
+}
+
+.reveal-mask.is-visible {
+    animation-play-state: running;
+}
+
 /* Secondary border reveal effect */
 body .wp-element-button::after,
 body .wp-block-button__link::after,
