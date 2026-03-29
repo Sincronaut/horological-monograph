@@ -7,25 +7,33 @@
         </div>
         <!-- /wp:group -->
 
-        <!-- wp:group {"className":"site-header__nav"} -->
-        <nav class="site-header__nav">
-            <ul class="site-header__menu">
-                <li class="current-menu-item"><a href="#">Heritage</a></li>
-                <li><a href="#">Collections</a></li>
-                <li><a href="#">Novelties</a></li>
-                <li><a href="#">Bespoke</a></li>
-            </ul>
-        </nav>
-        <!-- /wp:group -->
+        <!-- Hamburger Toggle (Pure CSS Hack) -->
+        <input type="checkbox" id="nav-toggle" class="site-header__toggle-input" aria-hidden="true">
+        <label for="nav-toggle" class="site-header__hamburger" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
-        <!-- wp:group {"className":"site-header__icons"} -->
-        <div class="site-header__icons">
-            <a href="#" class="site-header__icon-link" aria-label="Search">
-                <img src="/wp-content/themes/child-horological-monograph/assets/images/search.webp" alt="Search Icon" width="20" height="20" />
-            </a>
-            <a href="#" class="site-header__icon-link" aria-label="Cart">
-                <img src="/wp-content/themes/child-horological-monograph/assets/images/shopping-bag.webp" alt="Cart Icon" width="20" height="20" />
-            </a>
+        <!-- wp:group {"className":"site-header__nav-wrap"} -->
+        <div class="site-header__nav-wrap">
+            <nav class="site-header__nav">
+                <ul class="site-header__menu">
+                    <li class="current-menu-item"><a href="#">Heritage</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Novelties</a></li>
+                    <li><a href="#">Bespoke</a></li>
+                </ul>
+            </nav>
+            
+            <div class="site-header__icons">
+                <a href="#" class="site-header__icon-link" aria-label="Search">
+                    <img src="/wp-content/themes/child-horological-monograph/assets/images/search.webp" alt="Search Icon" width="20" height="20" />
+                </a>
+                <a href="#" class="site-header__icon-link" aria-label="Cart">
+                    <img src="/wp-content/themes/child-horological-monograph/assets/images/shopping-bag.webp" alt="Cart Icon" width="20" height="20" />
+                </a>
+            </div>
         </div>
         <!-- /wp:group -->
     </div>
